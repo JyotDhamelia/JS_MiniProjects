@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <title>Simple Calculator</title>
+</head>
+     <body>
+        <div class="container mt-5">
+            <h1>Simple Calculator</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="result" id="resultLabel" class="form-label">Result:</label>
+                    <input type="text" class="form-control" id="result" placeholder="Result will be here soon..."
+                        readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="number1" class="form-label">Enter First Number:</label>
+                    <input type="number" class="form-control" id="number1" placeholder="Enter number 1">
+                </div>
+                <div class="mb-3">
+                    <label for="number2" class="form-label">Enter Second Number:</label>
+                    <input type="number" class="form-control" id="number2" placeholder="Enter number 2">
+                </div>
+                <div class="mb-3">
+                    <button type="button" id="add" class="btn btn-primary w-100 mb-3" onclick = "calculate('add')">Add</button>
+                    <button type="button" id="sub" class="btn btn-secondary w-100 mb-3" onclick = "calculate('sub')">Subtract</button>
+                    <button type="button" id="mul" class="btn btn-success w-100 mb-3" onclick = "calculate('mul')">Multiply</button>
+                    <button type="button" id="div" class="btn btn-info w-100 mb-3" onclick = "calculate('div')">Divide</button>
+                    <button type="button" id="avg" class="btn btn-warning w-100 mb-3" onclick = "calculate('avg')">Average</button>
+                    <button type="reset" id="reset" class="btn btn-danger w-100 mb-3">Clear All</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+          
+
+
+
+            function calculate(operation) {
+
+      
+
+                var number1 = parseFloat(document.getElementById('number1').value);
+                var number2 = parseFloat(document.getElementById('number2').value);
+                var resultLabel = document.getElementById('resultLabel');
+                var result = document.getElementById('result');
+
+               
+                if (operation === "add") {
+                    resultLabel.textContent = "Result (Addition):";
+                    result.value = number1 + number2;
+                }
+                else if (operation === "sub") {
+                    resultLabel.textContent = "Result (Subtraction):";
+                    result.value = number1 - number2;
+                }
+                else if (operation === "mul") {
+                    resultLabel.textContent = "Result (Multiplication):";
+                    result.value = number1 * number2;
+                }
+                else if (operation === "div") {
+                    resultLabel.textContent = "Result (Division):";
+                    result.value = number1 / number2;
+                }
+                else if(operation ==="avg"){
+                    resultLabel.textContent = "Result (Average):";
+                    result.value = (number1 + number2) / 2;
+                }
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

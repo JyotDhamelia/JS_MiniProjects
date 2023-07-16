@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Simple Interest Calculator</title>
+</head>
+<body class="mt-5">
+    <div class="container">
+        <h1 class="mb-4">Simple Interest Calculator</h1>
+        <hr>
+        <form>
+          <div class="mb-3">
+            <label for="principal" class="form-label">Principal Amount:</label>
+            <input type="number" class="form-control" id="principal" placeholder="Enter principal amount" required>
+          </div>
+          <div class="mb-3">
+            <label for="rate" class="form-label">Interest Rate:</label>
+            <input type="number" class="form-control" id="rate" placeholder="Enter interest rate" required>
+          </div>
+          <div class="mb-3">
+            <label for="time" class="form-label">Time Period (in years):</label>
+            <input type="number" class="form-control" id="time" placeholder="Enter time period" required>
+          </div>
+          <button type="button" class="btn btn-primary w-100" onclick="calculateSimpleInterest()">Calculate</button>
+        </form>
+        <div class="mt-4">
+          <h3>Interest: <span id="result"></span></h3>
+          <h3>Total Amount: <span id="total"></span></h3>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script> 
+    function calculateSimpleInterest()
+    {
+        var amount = parseFloat(document.getElementById('principal').value);
+        var rate = parseFloat(document.getElementById('rate').value);
+        var time = parseFloat(document.getElementById('time').value);
+        var result = document.getElementById('result');
+        var total = document.getElementById('total');
+
+        var interest = (amount * rate * time)/ 100;
+        var total_amount = amount+interest;
+        document.getElementById("result").innerHTML=interest;
+        document.getElementById("total").innerHTML=total_amount;
+    }
+</script>
+</html>
