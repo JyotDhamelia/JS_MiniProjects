@@ -41,4 +41,7 @@ Note: All this miniprojects are available on codepen you can go and visit my cod
 - Random Password Generator: it requires password length for generating password that long also gives options to select Contains uppercase, Contains lowercase, Contains numbers, Contains symbols to generate password accordingly.
 - Online quiz taker: it takes quiz of some technical questions and displays score at the end of the quiz.
 - Random colorcode generator: it gives one button to click and change colorcode. everytime user clicks on button it generates new color also turns background of the browser in that perticular color.
-- Countdown: it displays how much time is left for your decided date in code. it displays Days, Hours, Minutes and Second remaining for that decided date.   
+- Countdown: it displays how much time is left for your decided date in code. it displays Days, Hours, Minutes and Second remaining for that decided date.
+
+# License
+- This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
